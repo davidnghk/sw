@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>敬啟者,</h2>
+    
+    <p>新道路報告: <%= @order.issue.chi_name %> <%= @order.district.chi_name %>
+        <%= @order.location %> </p>
+    <%= link_to '新新道路報告', :controller => "orders", :action => "show", :id => @order %>
+    
+    <br>
+    <p><strong>報告日期:</strong>  <%= @order.booking_datetime.strftime("%F %I:%M %P") %> </p>
+    <p><strong>報告人:</strong>    <%= @order.user.name %> </p>
+    <p><strong>報告電郵地址:</strong>    <%= @order.user.email %> </p>
+    <p><strong>地區:</strong>      <%= @order.district.display_name %> </p>
+    <p><strong>位置:</strong>      <%= @order.location %> </p>
+
+    <p>請盡快確認此道路報告。  </p>
+    <br>
+    <p>投告有門</p>
+    <p>智叻科技有限公司</p>
+
+    <br>
+
+    <h2>Dear sir,</h2>
+    
+    <p>New Road Report: <%= @order.issue.name %> <%= @order.district.name %>
+        <%= @order.location %> </p>
+    <%= link_to 'New Report', :controller => "orders", :action => "show", :id => @order %>
+    
+    <br>
+    <p><strong>Report Date:</strong>  <%= @order.booking_datetime.strftime("%F %I:%M %P") %> </p>
+    <p><strong>Reporter:</strong>    <%= @order.user.name %> </p>
+    <p><strong>Reporter Email:</strong>    <%= @order.user.email %> </p>
+    <p><strong>District:</strong>      <%= @order.district.display_name %> </p>
+    <p><strong>Location:</strong>      <%= @order.location %> </p>
+
+    <p>Your early acknowledgment will be appreciated  </p>
+    <br>
+    <p>Road Reporter (Hong Kong)</p>
+    <p>letsapp Limited</p><br><br>
+
+    <table>
+      <% @order.photos.each_slice(4) do |photos| %>
+        <tr>
+          <% photos.each do |photo| %>
+            <td>
+              <%= image_tag(photo.image,  style: 'height:25%;width:auto;' ) %><br />
+              <% if photo.latitude? %>
+                <%= link_to "Location 位置", "http://maps.google.com/maps?&z=15&mrt=yp&t=k&q=#{photo.latitude}+#{photo.longitude}" %>  <br />  
+              <% end %> 
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+  
+
+</html>
+

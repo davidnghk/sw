@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  complaint_no: 1
+  complaint_title: MyString
+  contract_id: 
+  district_id: 
+  street_id: 
+  location: MyString
+  report_datetime: 2017-08-09 18:54:22
+  complaint_datetime: 2017-08-09 18:54:22
+  deadline: 2017-08-09 18:54:22
+  complaint_type: 1
+  report_channel: 1
+  officer_id: 1
+  contractor_id: 1
+  worker_id: 1
+  status: 1
+  image_01: MyString
+  image_02: MyString
+  image_03: MyString
+  image_04: MyString
+
+two:
+  complaint_no: 1
+  complaint_title: MyString
+  contract_id: 
+  district_id: 
+  street_id: 
+  location: MyString
+  report_datetime: 2017-08-09 18:54:22
+  complaint_datetime: 2017-08-09 18:54:22
+  deadline: 2017-08-09 18:54:22
+  complaint_type: 1
+  report_channel: 1
+  officer_id: 1
+  contractor_id: 1
+  worker_id: 1
+  status: 1
+  image_01: MyString
+  image_02: MyString
+  image_03: MyString
+  image_04: MyString

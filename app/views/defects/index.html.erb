@@ -1,0 +1,47 @@
+
+ <div class="container">
+
+  <h1><%= t("defects_list") %></h1>
+
+  <table id="codetable" class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t("code") %></th>
+        <th><%= t("name") %></th>
+        <th><%= t("chi_name") %></th>
+        <th><%= t("category") %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @defects.each do |defect| %>
+        <tr>
+          <td><%= defect.code %></td>
+          <td><%= defect.name %></td>
+          <td><%= defect.chi_name %></td>
+          <td><%= defect.category %></td>
+          
+            <td class="text-right">
+              <%= link_to defect do %>
+                <i class="glyphicon glyphicon-zoom-in"></i>
+              <% end %>
+              <%= link_to edit_defect_path(defect)  do %>
+                <i class="glyphicon glyphicon-edit"></i>
+              <% end %>
+              <%= link_to defect, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="glyphicon glyphicon-trash"></i>
+              <% end %>
+            </td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to new_defect_path  do %>
+          <i class="glyphicon glyphicon-plus"></i>
+  <% end %>
+</div>

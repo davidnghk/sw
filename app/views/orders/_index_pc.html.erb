@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <%= link_to t('OpenReports'), orders_path(:status => "Open"), class: 
+          "btn btn-tab btn-light btn-tab btn-lg col  col-md-3"  %>  
+    <%= link_to t('FiledReports'), orders_path(:status => "Filed"), class: 
+          "btn btn-tab btn-success btn-tab btn-lg col  col-md-3"  %> 
+    <%= link_to t('CancelledReports'), orders_path(:status => "Cancelled"), class: 
+          "btn btn-tab btn-warning btn-tab btn-lg col  col-md-3"  %> 
+    <%= link_to t('AllReports'), orders_path(:status => "All"), class: 
+          "btn btn-tab btn-info btn-tab btn-lg col  col-md-3"  %> 
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t("order_no") %></th>
+        <th><%= t("booking_date") %></th>
+        <th><%= t("user_ref") %></th> 
+        <th><%= t("user_ref_no") %></th> 
+        <th><%= t("issue") %></th> 
+        <th><%= t("location") %></th>
+        <th><%= t("staff_name") %></th>
+        <th><%= t("Sign_Date") %></th>
+        <th><%= t("status") %></th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+    <% if @orders.count > 0 %>
+      <% @orders.each do |order| %>
+        <tr class="info" data-link="<%= order_path(order) %>">
+          <td><%= order.order_no %></td>
+          <td><%= order.booking_datetime.strftime("%Y-%m-%d") if order.booking_datetime? %></td>
+          <td><%= order.user_ref %></td>
+          <td><%= order.user_ref_no %></td>
+          <td><%= order.issue.display_name %></td>
+          <td><%= order.location %></td>
+          <td><%= order.staff_name %></td> 
+          <td><%= order.staff_signoff_datetime.strftime("%Y-%m-%d") if order.staff_signoff_datetime? %></td> 
+          <td><%= t(order.status) %></td> 
+        </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <%= will_paginate @orders, :previous_label => '< ', :next_label => ' >' %>
+  <br>
+
+  <%= link_to new_order_path  do %>
+          <i class="glyphicon glyphicon-plus"></i>
+  <% end %>

@@ -1,0 +1,41 @@
+<div class="container">
+
+  <h1><%= t("sources_list") %></h1>
+
+  <table id="codetable" class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t("name") %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @sources.each do |source| %>
+        <tr>
+          <td><%= source.name %></td>
+          
+            <td class="text-right">
+              <%= link_to source do %>
+                <i class="glyphicon glyphicon-zoom-in"></i>
+              <% end %>
+              <%= link_to edit_source_path(source)  do %>
+                <i class="glyphicon glyphicon-edit"></i>
+              <% end %>
+              <%= link_to source, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="glyphicon glyphicon-trash"></i>
+              <% end %>
+            </td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to new_source_path  do %>
+          <i class="glyphicon glyphicon-plus"></i>
+  <% end %>
+</div>
+

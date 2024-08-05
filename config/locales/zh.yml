@@ -1,0 +1,812 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+zh:   
+  organization: "組織"
+  designation: "角色"
+  relevant_parties: "相關人士"
+  product: "外勤妥"
+  module: "安全行"
+  defects_list: "缺陷清單"
+  due_date: "預期日期" 
+  responsible_person: "負責人"
+  defect: "問題"
+  staff_name:    "施工代理"
+  customer_name: "工程師"
+  staff_signoff_date: "施工代理簽署日期"
+  customer_signoff_date: "工程師簽署日期"
+  user_ref: "合同編號"
+  user_ref_no: "編號"
+  demo: "示範表現"
+  google: "谷歌登錄"
+  FAQ: "常見問題"
+  facebook_signin: "面書登錄"
+  All: "全部"
+  RearchReport: "搜查報告"
+  ReportLists: "我的報告"
+  NewReport: "開新報告"
+  reference: "參考"
+  report: "報告"
+  OpenReports: "開新報告"
+  FiledReports: "已提交報告"
+  CancelledReports: "已取消報告"
+  AllReports: "所有報告"
+  file: "提交"
+  Filed: "已提交"
+  download_images: "下載相片"
+  Appraised: "已評估"
+  Reported: "已報告" 
+  form: "表格"
+  photos: "相片"
+  after_photos: "工程後" 
+  before_photos: "工程前"
+  orders_list: "NF單"
+  add_record: "加記錄"
+  OpenOrders: "新NF單"
+  PendingOrders: "待審核"
+  InProgressOrders: "開工單"
+  CompletedOrders: "完工單"
+  ReportedOrders: "上報單"
+  AppraisedOrders: "評估單"
+  AllOrders: "所有單"
+
+  delete: "刪除"
+  quantity: "數量"
+  network_manager: "聯絡經理"
+  reporting_officer: "報告人員"
+  order_no: "工程編號"
+  inspection_date: "檢查日期"
+  slope: "斜坡"
+  work_duration: "工作時限（天）"
+  report_duration: "報告時限（天）"
+  location: "位置/斜坡"
+  notification_date: "通知日期"
+  heading: "標題"
+  noncompliance_list: "違規目錄"
+  my_job: "我的工程"
+  job: "承辦工程"
+  job_list: "工程目錄"
+  district: "區域"
+  district_list: "區域目錄"
+  people_list: "工作人員目錄"
+  defect_list: "問題目錄"
+  post: "職務"
+  category: "類別"
+  General:   "投訴相"
+  Before: "工程前"
+  After: "工程後"  
+  upload: "上載"
+  Archive: "檔案"
+  Open:   "新單"
+  Completed: "已完工"
+  InProgress: "處理中"
+  Pending:   "待轉介" 
+  MisAssigned: "不關事"
+  Referred: "已轉介"
+  Inspecting: "檢查中"
+  NotFound: "未發現"
+  acknowledge: "確認"
+  return: "退回"
+  cancel: "取消"
+  complete: "完工"
+  arrange: "安排處理"
+  remarks: "備註"
+  complaint_start_date: "最早投訴日期"
+  complaint_end_date: "最遲投訴日期"
+  remove: "清除"
+  reply: "回覆"
+  Acknowledge-Report: "確認報告"
+  Final-Report: "總結報告"
+  AcknowledgeReport: "Acknowledgement"
+  InterimReport: "Interim Report"
+  FinalReport: "Final Report"
+  MgtReport: "Management Report"
+  ReferralReport: "Referral Report"
+  GenReport: "生成報告"
+  MgtRemarks: "管理備註"
+  MgtContractorPerformance: "管理承包商業績"
+  MgtDefectReason: "管理缺陷原因"
+  final_remarks: "最後備註"
+  is_work_completed: "完成嗎?"
+  is_in_fax: "全部在傳真裡嗎?"
+  sender_withdraw_date: "發件人撤回日期"
+  final_sender_date: "最後發件人日期"
+  interim_sender_date: "中期發件人日期"
+  interim_remarks: "中期備註"
+  referral_remarks: "轉介備註"
+  notify_sender_date: "通知發件人日期"
+  referral_date: "轉介日期"
+  acknowledge_date: "確認日期"
+  refer_to_department: "轉介部門"
+  search_complaints: "搜索投訴"
+  complaintPhoto: "投訴相"
+  ref: "參考"
+  completion_date: "完工日期"
+  tma: "TMA"
+  description: "描述"
+  speed_limit: "限制速度"
+  InProgressComplaint: "工程中"
+  theMap: "地圖"
+  beforePhoto: "工程前"
+  afterPhoto: "工程後"
+  InProgress: "工程中"
+  RejectComplaint: "拒認"
+  AcceptComplaint: "確認"
+  InspectionComplaint:  "檢查中"
+  Pending:   "待轉介" 
+  Valid:   "安排處理" 
+  case_no: "編號"
+  effort: "時間(工作天)"
+  source: "轉介官員"
+  sources_list: "官員名單"
+  latitude: "緯度"
+  longitude: "經度"
+  spot: "現場"
+  OpenComplaint: "新投訴"
+  ClosedComplaint: "已完成"
+  AllComplaint: "所有投訴"
+  Phone: "電話"
+  Fax: "傳真"
+  Email: "電郵"
+  Pothole:   "壺洞"
+  TrafficSign: "交通標誌"
+  UntidySite: "不潔工地"
+  Hygiene: "衛生問題"
+  GeneralCase: "其他"
+  report_channel: "報告渠道"
+  new: "新"
+  complaint: "投訴"
+  title: "標題"
+  complaint_type: "投訴類型"
+  new_complaint: "新投訴"
+  contract: "合同"
+  officer: "負責經理"
+  worker: "工人"
+  verdict: "判決"
+  new_verdict: "新判決"
+  verdicts_list: "判決"
+  complaints_list: "投訴清單"
+  contracts_list: "合同名單"
+  streets_list: "街道名單"
+  contractor: "承包商"
+  districts_list: "區域名單"
+  streets_list: "街道名單"
+  street: "街道"
+  list: "名單"
+  code: "代碼"
+  brand: "安全行"
+  cic_no: "CIC編號"
+  complaint_date: "投訴日期"
+  report_date: "報告日期"
+  CIC_case: "CIC參考"
+  deadline: "死線限期"
+
+  app_title: "投訴門"
+  app_desc: "道路報告香港使人們能夠用智能手機迅速向有關政府部門報告道路狀況，如不良道路標誌或不平地面。"
+
+  company: "LetsApp Limited"
+  our_services: "雲端訂單管理系統"
+  dashboard: "錶板"
+  was_refunded: "已被退還"
+  will_be_refunded: "將會被退還"
+  cancel_time: "取消時間"
+  refund_amount: "退款金額"
+  booking_list: "訂單清單"
+  new_booking: "開新訂單"
+  preferred_language: "首選語言"
+  hello: "Hello world"
+  duration: "為期"
+  hours: "小時"
+  home: "首頁"
+  order: "柯打"
+  order_list: "投訴記錄"
+  new_order: "新NF單"
+  pending_order: "待辦柯打"
+  esc_order: "上報柯打"
+  today_order: "今天柯打"
+  worksheet: "工作紙"
+  take_photo: "影相"
+
+  my_order: "柯打"
+  booking: "訂單"
+  List_Booking: "訂單清單"
+  New_Booking: "新訂單"
+  about: "關於我們"
+  edit_account: "編輯帳戶"
+  account: "帳戶"
+  sign_out: "登出"
+  sign_in: "登錄"
+  sign_up: "註冊"
+  forget_password?: "忘記密碼?"
+  remember_me: "記住密碼"
+  admin: "管理員"
+  users: "用戶"
+  start_datetime: "時間"
+  no_of_hours: "小時"
+  pickup: "起點"
+  dropoff: "目的地"
+  trip_type: "旅程"
+  helper_class: "幫手類"
+  total_fee: "總費用"
+  server: "服務員"
+  status: "狀態"
+  OneWay: "單程"
+  RoundTrip: "來往"
+  Helper: "幫手"
+  Nurse: "護士"
+  listing_booking: "訂單清單"
+  new: "新增"
+  Booked: "新增"
+  Confirmed: "確認"
+  Completed: "完成"
+  partner_up: "加盟"
+  server_grade: "服務级别"
+  location: "地點/地盤"
+  hospital: "醫院"
+  contact_person: "聯絡人"
+  contact_phone_no: "聯絡電話"
+  location_details: "詳細地點"
+  fee: "費用"
+  booking_date: "日期"
+  booking_time: "時間"
+  customer: "客戶"
+  complete_order: "未完成柯打"
+  edit_order: " 修正柯打"
+  order: "柯打"
+
+  rejected: "拒絕"
+  Cancelled: "已取消"
+  cancelled: "已取消"
+  confirmed: "確認"
+  completed: "完成"
+  open_orders: "柯打"
+  payment_date: "付款日期"
+  nurse_rating: "評分"
+  preferred_language: "聯繫語言"
+  customer_rating: "客戶評分"
+  nurse_phone_no: "護士聯絡電話"
+  Invalid: "無效"
+  Closed: "完成"
+  Pending: "待轉介"
+  Completed: "完成"
+  FollowUp: "跟進"
+  Escalated: "上報"
+  name: "名稱"
+  chi_name: "中文名稱"
+  client_list: "客戶名單"
+  clients: "客戶"
+  clients_by_months: "每月客戶"
+  new_client: "新客戶"
+  store_list: "商鋪名單"
+  Photographed: "已拍照"
+  client_ref: "客户参考"
+  staff: "員工"
+  current_password: "當前密碼"
+  leave_blank_password: "如果不想更改密碼，請留空這段。"
+  enter_password: "更改密碼，請輸入當前密碼。"
+  edit: "編輯"
+  document: "維修檔案"
+  show: "詳情"
+  update: "更新"
+  delete: "刪除"
+  notes: "注意"
+  chi_address: "中文地址"
+  photo: "照片"
+
+  address: "地址"
+  deskboard: "儀表板圖表"
+  today_orders: "今天柯打"
+  past_year_orders: "一年柯打"
+
+  our_business: "我們的服務"
+  our_business1: "銷售"
+  our_business2: "安装工程"
+  our_business3: "維修及保養"
+  
+  customer: "客户"
+  order_time: "時間"
+  hours: "小時"
+  hospital: "醫院"
+  cost: "分帳"
+  contact: "聯絡人"
+  phone_no: "電話號碼"
+  nurse: "護士"
+  payment: "訂金"
+  Paid: "已付"
+  ot: "未付"
+  
+  client: "客戶"
+  address: "英文地址"
+  store: "商鋪"
+  district: "區域"
+  phone: "電話號碼"
+  area:  "地區"
+  call_date: "投訴日期"
+  repair_date: "維修日期"
+  technician: "承包商"
+  device: "道路"
+  devices: "道路"
+  issue: "問題"
+  issues_list: "問題類型"
+  work: "修復工作"
+  on_or_after: "當日或之後"
+  on_or_before: "當日或之前"
+  maintenance_photo: "維修照片"
+  date_range: "日期"
+  complete: "完成"
+  followup: "跟進"
+  reopen: "重開"
+  escalate: "上報"
+  administration: "管理"
+  device_list: "設備目錄"
+  issue_list: "問題目錄"
+  work_list: "修理目錄"
+  acknowledge_time: "收到時間"
+  
+  engage: "接單"
+  disengage: "放單"
+  reject: "拒絕"  
+  admin: "管理員"
+  partner: "夥伴"
+
+  FAQ_1Q: "投訴門 它有什麼作用 ?"
+  FAQ_1A: "這是一個移動/筆記本電腦應用程序，可以讓人們報告道路問題，如道路損壞或樹木倒下，至負責的部門在香港。"  
+  FAQ_2Q: "這是香港政府的應用程式嗎？"
+  FAQ_2A: "不，它是由 智叻科技有限公司 開發的應用程序。"
+  FAQ_3Q: "我們需要支付使用它嗎？ "
+  FAQ_3A: "不，它可以免費使用。 "
+  FAQ_4Q: "為什麼使用它而不是直接向香港政府報告？ " 
+  FAQ_4A: "投訴門 讓您的生活變得更輕鬆，您只需點擊幾下即可報告道路問題。."
+  FAQ_5Q: "投訴門 有什麼特別的?"
+  FAQ_5A: "使用智能手機可以輕鬆使用，並支持照片上傳。 "  
+  FAQ_6Q: "我可以提交沒有照片的道路報告嗎？ "
+  FAQ_6A: "是的，但一張圖片比千言萬語更好。 此外，照片的GPS數據可以精確定位位置。"
+  FAQ_7Q: "我怎麼能註冊？"
+  FAQ_7A: "您可以在網上註冊，或直接通過 谷歌 賬戶註冊。"
+  FAQ_8Q: "投訴門的隱私政策是什麼？"
+  FAQ_8A: "我們不收集用戶個人數據，也不會將數據提供給第三方。"
+
+  gen_reports: 
+    NotAcknowledged: "還沒確認"
+    AcknowledgeReport: "確認報告"
+    InterimReport: "中期報告"
+    FinalReport: "總結報告"
+    MgtReport: "管理報告"
+    ReferralReport: "轉介報告"
+
+  mgt_contractor_performances:
+    CapitalWork: "資本工作"
+    MaintenanceWork: "保養"
+    Not: "不"
+
+  mgt_defect_reasons:
+    Notvalid: "無效"
+    Duplicate: "重複案例"
+    Maintenance: "保養"
+    HyDRoadwork: "公路部門修路工程"
+    OthRoadWork: "其他修路工程"
+    CarAccident: "汽車事故"
+    IllegalParking: "非法停車"
+    Vandalism: "惡意破壞"
+    OutJurisdiction: "不在管轄範圍"
+    OthRemarks: "其他備註"
+
+  refer_to_departments:
+    WSD: "WSD"
+    DSD: "DSD"
+    HyD: "HyD"
+
+  statuses:
+    Filed: "已經提交"
+    Open:   "新單"
+    Cancelled: "已取消"
+    Completed: "已完工"
+    InProgress: "處理中"
+    Pending:   "待轉介" 
+    MisAssigned: "不關事"
+    Referred: "已轉介"
+    Inspecting: "檢查中"
+    NotFound: "未發現"
+    Reported: "已報告" 
+    Appraised: "已評估"
+
+  simple_form:
+    labels:
+      default:
+        code: "代碼"
+        name: "名稱"
+        chi_name: "中文名稱"
+      client:
+        effort: "時間(工作天)"
+
+  simple_form:
+    labels:
+      defaults:
+        speed_limit: "限制速度"
+        description: "描述"
+        longitude: "經度"
+        latitude: "緯度"
+        spot: "現場"
+        code: "代碼"
+        name: "名稱"
+        chi_name: "中文名稱"
+        effort: "時間(工作天)"
+        email: "電郵帳戶"
+        name: "名稱"
+        image: "照片"
+        user: '用戶'
+        password: "密碼"
+        order_datetime: '時間'
+        hours: '小時'
+        hospital: "醫院"
+        location: "地點/地盤"
+        contact_person: "聯繫人"
+        contact_phone_no: "聯繫電話號碼"
+        preferred_language: "聯繫語言"  
+        status: "狀況"
+    placeholders:
+      defaults:
+        username: 'Your username'
+        password: '****'
+        order_datetime: 'Time'
+        hours: 'Hours'
+        hospital: "Hospital"
+        location: "地點/地盤"
+        contact_person: "Contact Person"
+        contact_phone_no: "Phone No"
+        nurse: "Nurse"
+        status: "Status"
+        
+  attributes:
+    booking:
+      start_datetime: "時間"
+      location: "地點/地盤"
+      status: "狀態"
+    user:
+      name: "名字"
+      email: "電郵"
+
+  activerecord:
+    enums:
+      order:
+        status:
+          Open:   "新單"
+          Pending: "待轉介"
+          Completed: "已完成"
+          InProgress: "工程中" 
+          Reported: "已報告" 
+          Appraised: "已評估" 
+      complaint:   
+        status:
+          cancelled: "已取消"
+          Open:   "新單"
+          Invalid: "無效投訴"
+          Pending: "待轉介"
+          Completed: "已完成"
+          Valid:   "有理投訴"
+          InProgress: "工程中"
+        complaint_type:
+          Pothole:   "壺洞"
+          TrafficSign: "交通標誌"
+          UntidfySite: "不潔工地"
+          Hygiene: "衛生問題"
+          GeneralCase: "其他"
+      photo:
+        category:
+          General:   "投訴相"
+          Before: "工程前"
+          After: "工程後"   
+      user:
+        role:
+          customer: "客戶"
+          partner: "業務夥伴"
+          admin: "管理員"
+          user: "用戶"
+          vip: "重要人物"
+        qualification:
+          registtered_nurse: "註冊護士"
+          enrolled_nurse: "登記護士"
+    errors:
+      messages:
+        record_invalid: "驗證失敗︰%{errors}"
+        restrict_dependent_destroy:
+          has_one: 由於%{record}依賴此記錄，無法移除
+          has_many: 由於%{record}依賴此記錄，無法移除
+      models:
+        complaint:  
+          attributes:
+            complaint_datetime:
+              in_past: "No future complaint!"
+        user:
+          attributes:
+            name:
+              blank: "名稱不能空"
+            email:
+              blank: "電子郵件地址不能空"
+            password:
+              blank: "密碼不能空"
+            password_confirmation:
+              blank: "密碼確認不能空"
+
+
+        
+  date:
+    abbr_day_names:
+    - 周日
+    - 周一
+    - 周二
+    - 周三
+    - 周四
+    - 周五
+    - 周六
+    abbr_month_names:
+    -
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+    day_names:
+    - 星期日
+    - 星期一
+    - 星期二
+    - 星期三
+    - 星期四
+    - 星期五
+    - 星期六
+    formats:
+      default: "%Y-%m-%d"
+      long: "%Y年%b%d日"
+      short: "%b%d日"
+    month_names:
+    -
+    - 一月
+    - 二月
+    - 三月
+    - 四月
+    - 五月
+    - 六月
+    - 七月
+    - 八月
+    - 九月
+    - 十月
+    - 十一月
+    - 十二月
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: 約一小時
+        other: 約%{count}小時
+      about_x_months:
+        one: 約一個月
+        other: 約%{count}個月
+      about_x_years:
+        one: 約一年
+        other: 約%{count}年
+      almost_x_years:
+        one: 接近一年
+        other: 接近%{count}年
+      half_a_minute: 半分鐘
+      less_than_x_minutes:
+        one: 不到一分鐘
+        other: 不到%{count}分鐘
+      less_than_x_seconds:
+        one: 不到一秒
+        other: 不到%{count}秒
+      over_x_years:
+        one: 超過一年
+        other: 超過%{count}年
+      x_days:
+        one: 一天
+        other: "%{count}天"
+      x_minutes:
+        one: 一分鐘
+        other: "%{count}分鐘"
+      x_months:
+        one: 一個月
+        other: "%{count}個月"
+      x_seconds:
+        one: 一秒
+        other: "%{count}秒"
+    prompts:
+      day: 日
+      hour: 時
+      minute: 分
+      month: 月
+      second: 秒
+      year: 年
+  errors:
+    models:
+      booking:
+        attributes:
+          hours:
+            blank: "沒有指定時間長短"
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: 必定要被接受
+      blank: "不可以是空白"
+      present: "必定要是空白"
+      confirmation: 兩次輸入不一致
+      empty: "不可以留空"
+      equal_to: "必須等於 %{count}"
+      even: "必須要是雙數"
+      exclusion: "是被保留的關鍵字"
+      greater_than: "必須大於 %{count}"
+      greater_than_or_equal_to: "必須大於或等於 %{count}"
+      inclusion: "並非可被接受的內容"
+      invalid: "是無效的"
+      less_than: "必須小於 %{count}"
+      less_than_or_equal_to: "必須小於或等於 %{count}"
+      model_invalid: "驗證失敗︰%{errors}"
+      not_a_number: "必須是數字"
+      not_an_integer: "必須是整數"
+      odd: "必須是單數"
+      required: 必須存在
+      taken: "已被使用"
+      too_long:
+        one: 太長（最長為一個字元）
+        other: 太長（最長為 %{count} 個字元）
+      too_short:
+        one: 太短（最少為一個字元）
+        other: 太短（最少為 %{count} 個字元）
+      wrong_length:
+        one: 字數錯誤 (應為一個字元)
+        other: 字數錯誤 (應為 %{count} 個字元)
+      other_than: "不可以是 %{count} 個字"
+    template:
+      body: 以下欄位發生問題︰
+      header:
+        one: 發生一項錯誤，以致 %{model} 未能儲存。
+        other: 發生%{count}項錯誤，以致 %{model} 未能儲存。
+  
+  helpers:
+    placeholder:
+      user:
+        email: "電郵帳戶"
+        name: "名稱"
+        image: "照片"
+        user: "用戶"
+        password: "密碼"
+    label:
+      user:
+        email: "電郵帳戶"
+        name: "名稱"
+        image: "照片"
+        hkid_image: "香港身份證照片"
+        certificate_image: "證書照片"
+        user: "用戶"
+        password: "密碼"
+        password_confirmation: "確認密碼"
+        phone_no: "電話號碼"
+        registration_english_name: "註冊英文名稱"
+        registration_chinese_name: "註冊中文名稱"
+        registration_no: "註冊號碼"
+        registration_expiry_date: "註冊到期日"
+        qualification: "職業資格"
+        bank: "銀行"
+        bank_account_no: "銀行帳號"
+        bank_account_name: "銀行帳戶名稱"
+    select:
+      prompt: "請選擇"
+    submit:
+      create: "新增"
+      submit: "儲存"
+      update: "更新"
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%u %n"
+        precision: 2
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: HK$
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: 十億
+          million: 百萬
+          quadrillion: 千兆
+          thousand: 千
+          trillion: 兆
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: false
+        strip_insignificant_zeros: false
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: 和
+      two_words_connector: 和
+      words_connector: "、"
+  time:
+    am: 上午
+    formats:
+      default: "%Y年%b%d日 %A %H:%M:%S %Z"
+      long: "%Y年%b%d日 %H:%M"
+      short: "%b%d日 %H:%M"
+    pm: 下午
+    
+    
+  errors:
+    messages:
+      in_future: "S該日期應該是在未來"
+      
+  datepicker:
+    dformat: '%Y/%m/%d'             # display format of the date (this is the default, can be ommited)
+    pformat: 'YYYY/MM/DD'           # picking format of the date (this is the default, can be ommited)
+  timepicker:
+    dformat: '%R'                   # display format of the time (this is the default, can be ommited)
+    pformat: 'HH:00'                # picking format of the time (this is the default, can be ommited)
+  dayViewHeaderFormat: 'MMMM YYYY'
+  
+  activerecord:
+    errors:
+      models:
+        booking:
+          attributes:
+            hours:
+              blank: "No duration inputed"
+        complaint:  
+          attributes:
+            complaint_datetime:
+              in_past: "投訴日期必須在過去!"
+    attributes:
+      user:
+        name: "名字"
+        email: "電郵"

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store_id: 
+  call_date: 2016-09-24
+  repair_date: 2016-09-24
+  status: 1
+  technician_id: 1
+  device_id: 
+  issue_id: 
+  work_id: 
+
+two:
+  store_id: 
+  call_date: 2016-09-24
+  repair_date: 2016-09-24
+  status: 1
+  technician_id: 1
+  device_id: 
+  issue_id: 
+  work_id: 

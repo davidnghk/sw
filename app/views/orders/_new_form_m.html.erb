@@ -1,0 +1,68 @@
+<div class="container">
+  <br>
+  <%= simple_form_for(@order) do |f| %>
+
+    <div class="form-inputs"> 
+
+      <div class="row">
+          <div class="col-xs-12 col-md-4 ">
+            <%= f.association :issue, :label => t("issue") %>
+          </div>
+          <div class="col-xs-12 col-md-4 ">
+            <%= f.input :booking_datetime,  as:  :datetime_picker, label: t("booking_date") %>
+          </div>
+          <div class="col-xs-12 col-md-4 ">
+            <strong><%= t("order_no") %></strong><br><%= @order.order_no %>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-xs-12 col-md-4 ">
+            <%= f.input :user_ref, label: t("user_ref") %>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <%= f.input :location, :label => t("location") %>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <%= f.input :status, collection: Order.i18n_statuses %>
+          </div>
+      </div><br>
+
+      <div class="row">
+          <div class="col-xs-12 col-md-8 ">
+            <%= f.input :staff_name, label: t("staff_name") %>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <%= f.input :staff_signoff_datetime,  as:  :datetime_picker, :label => t("staff_signoff_date") %>
+          </div>
+      </div><br>
+
+      <div class="row">
+          <div class="col-xs-12 col-md-8 ">
+            <%= f.input :customer_name, label: t("customer_name") %>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <%= f.input :customer_signoff_datetime,  as:  :datetime_picker, :label => t("customer_signoff_date") %>
+          </div>
+      </div><br>
+      <div>
+        <%= f.input :notes, :placeholder => t("remarks"), label: false %>
+      </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+
+</div>
+
+  <% end %>
+
+  <br>
+  <%= link_to @order  do %>
+      <i class="glyphicon glyphicon-zoom-in"></i>
+  <% end %>
+  <%= link_to orders_path  do %>
+    <i class="glyphicon glyphicon-list"></i>
+  <% end %>
+</div>
+

@@ -1,0 +1,51 @@
+<div class="container">
+      <br>
+  <p>
+    <strong><%= t("defect")%>:</strong>
+    <%= @item.defect.display_name %>
+  </p>
+
+  <p>
+    <strong><%= t("location")%>:</strong>
+    <%= @item.location %>
+  </p>
+
+  <p>
+    <strong><%= t("followup")%>:</strong>
+    <%= @item.followup %>
+  </p>
+
+  <p>
+    <strong><%= t("due_date")%>:</strong>
+    <%= @item.due_date %>
+  </p>
+
+  <p>
+    <strong><%= t("responsible_person")%>:</strong>
+    <%= @item.responsible_person %>
+  </p>
+
+  <p>
+    <strong><%= t("completion_date")%>:</strong>
+    <%= @item.completion_date %>
+  </p> 
+
+  <p>
+    <strong><%= t("remarks")%>:</strong>
+    <%= @item.remarks %>
+  </p>
+
+  <%= link_to order_path(@item.order_id)  do %>
+    <i class="glyphicon glyphicon-backward"></i>
+  <% end %>
+  <%= link_to edit_item_path(@item)  do %>
+    <i class="glyphicon glyphicon-edit"></i>
+  <% end %>
+  <%= link_to @item, method: :delete, data: { confirm: 'Are you sure?' } do %>
+    <i class="glyphicon glyphicon-trash"></i>
+  <% end %>
+  <%= render 'before_photo_upload' %> 
+  <%= render 'after_photo_upload' %>
+  <%= render 'photo_upload' %>
+</div>
+  <div id="photo_details"><%= render 'photos/item_photo_details' %> </div>

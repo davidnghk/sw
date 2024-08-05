@@ -1,0 +1,25 @@
+<p>
+  <strong>Name:</strong>
+  <%= @order_party.name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @order_party.designation %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @order_party.organization %>
+</p>
+
+  <%= link_to order_path(@order_party.order_id)  do %>
+    <i class="glyphicon glyphicon-backward"></i>
+  <% end %>
+  <%= link_to edit_order_party_path(@order_party)  do %>
+    <i class="glyphicon glyphicon-edit"></i>
+  <% end %>
+  <%= link_to @order_party, method: :delete, data: { confirm: 'Are you sure?' } do %>
+    <i class="glyphicon glyphicon-trash"></i>
+  <% end %>
+

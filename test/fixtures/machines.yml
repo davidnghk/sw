@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  store_id: 1
+  beacon_id: 1
+  device_id: 1
+  temperature_ceiling: 1
+  temperature_floor: 1
+
+two:
+  name: MyString
+  store_id: 1
+  beacon_id: 1
+  device_id: 1
+  temperature_ceiling: 1
+  temperature_floor: 1

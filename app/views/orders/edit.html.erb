@@ -1,0 +1,6 @@
+<% if mobile_device? %>
+<% then %>
+  <%= render 'form_m', order: @order  %>
+<%else %>
+  <%= render 'form_pc', order: @order  %>
+<% end %> 

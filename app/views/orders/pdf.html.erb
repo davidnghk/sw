@@ -1,0 +1,275 @@
+
+<style>
+.break { page-break-before: always; }
+h1 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 16px;
+}
+h4 {
+    font-size: 12px;
+}
+h2, .newpage { page-break-before: always }
+h2 {
+    font-size: 17px;
+}
+p {
+    font-size: 14px;
+    line-height: 100%;
+}
+
+.pagebreak { page-break-before: always; } 
+
+table, th, td {
+    table-layout: fixed;
+    border-spacing: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 12px;
+    padding: 1px;
+    padding-bottom: 1px;
+}
+
+table#t01 {
+    border: hidden;
+    padding: 5px;
+    padding-bottom: 5px;
+    width:88%; 
+    height:88%;
+}
+
+</style>
+
+  <table style="width:100%">
+    <colgroup>
+       <col span="1" style="width: 75%;">
+       <col span="1" style="width: 25%;">
+    </colgroup>
+    <tr>
+      <td>Landslip Prevention and Mitigation Programme, Landskip Prevention and Mitigation Works in Hong Kong Island, Kowloon, The New Territories and Outlying Islands </td>
+      <td>Contract No.: <%= order.user_ref %> </td>
+    </tr>
+  </table>
+  <br><br> 
+
+  <center>
+    <strong>
+      <h1><u>Weekly safety Inspection Checklist 每周安全⾏檢查表</u></h1>
+    </strong>
+  </center><br>
+
+  <div class="row">
+    <div class="col-xs-8 col-md-8 ">
+      <p>Date of Inspection 視察日期: <%= order.booking_datetime.strftime("%F %I:%M %P")  %></p>      
+    </div>
+    <div class="col-xs-4 col-md-4 ">
+      <p>Walk No. 報告編號: <%= order.user_ref_no  %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-12 ">
+      <p>Site Location 地盆位置: <%= order.location  %></p>      
+    </div>
+  </div>
+
+<br><br><br>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>NAME 姓名</th>
+        <th>POST 職位</th>
+        <th>SIGNATURE 簽名</th>
+        <th>NAME 姓名</th>
+        <th>POST 職位</th>
+        <th>SIGNATURE 簽名</th>
+      </tr>
+    </thead> 
+    <tbody>
+        <% order.order_parties.each do |order_party | %>          
+          <tr>
+             <td><%=  order_party.name  %></td>
+             <td><%=  order_party.designation  %></td>
+             <td></td>
+          </tr> 
+        <% end %>
+
+    </tbody>
+  </table>
+
+  <center>
+    <strong>
+      <h3><u>Needs Improvement 需要改改善</u></h3>
+    </strong>
+  </center><br>
+
+    <% order.items.order(:due_date).each do |item | %>          
+      <p><%=  item.defect.display_name %></p>
+    <% end %>
+
+<div class="pagebreak"> </div>
+
+  <center>
+    <strong>
+      <h1><u>Summary of Follow-up Action</u></h1>
+    </strong>
+  </center><br>
+
+  <p>Part I: </p>
+  <p>Contract No.: <%= order.user_ref %></p>
+  <p> Contract Title : Landslip Prevention and Mitigation Programme 2016, Package K, Landslip Prevention and MitigationWorks i Hong Kong, Kowloon, The New Territories and Outlying Islands</p>
+
+  <p>Date of Inspection: <%= order.booking_datetime.strftime("%F %I:%M %P")  %></p> 
+  <br>
+  <p>Person(s) making the inspection:</p>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name in Block Letters</th>
+        <th>Designation</th>
+        <th>Organization</th>
+        <th>Signature</th>
+      </tr>
+    </thead> 
+    <tbody>
+        <% order.order_parties.each do |order_party | %>          
+          <tr>
+             <td><%=  order_party.name  %></td>
+             <td><%=  order_party.designation  %></td>
+             <td><%=  order_party.organization  %></td>
+             <td></td>
+          </tr> 
+        <% end %>
+
+    </tbody>
+  </table>  
+
+    <% if order.items.present? %>
+      <table id="stock_items" class="table table-striped">
+        <thead>
+          <tr>
+            <th ><%= t("defect") %></th>
+            <th ><%= t("location") %></th>
+            <th ><%= t("followup") %></th>
+            <th ><%= t("due_date") %></th>  
+            <th ><%= t("completion_date") %></th>  
+            <th ><%= t("responsible_person") %></th>  
+
+          </tr>
+        </thead> 
+
+        <tbody>
+
+          <% order.items.order(:due_date).each do |item | %>
+               <td><%=  item.defect.display_name  %></td>
+               <td><%=  item.location  %></td>
+               <td><%=  item.followup  %></td>
+               <td><%=  item.due_date.strftime("%Y-%m-%d") if item.due_date?   %></td>
+               <td><%=  item.completion_date.strftime("%Y-%m-%d") if item.completion_date?   %></td>
+               <td><%=  item.responsible_person  %></td>
+            </tr> 
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+
+  <br>
+  <p><u>To-be signed at the end of inspection</u></p>
+
+  <p><u>Part II: (to be countersigned after All actions are completed)</u></p>
+  
+  <br>
+  <div class="row">
+    <div class="col-xs-6 col-md-6 ">
+      <h4>Safety Officer:   <%= order.staff_name %></h4>
+    </div>
+    <div class="col-xs-6 col-md-6 ">
+      <h4>Engineer or his/her representative:    <%= order.customer_name %></h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6 col-md-6 ">
+      <h4>Date: <%= order.staff_signoff_datetime.strftime("%F") if order.staff_signoff_datetime  %><h4>
+    </div>
+    <div class="col-xs-6 col-md-6 ">
+      <h4>Date: <%= order.customer_signoff_datetime.strftime("%F") if order.customer_signoff_datetime %><h4>
+    </div>
+  </div>
+
+<br>
+  <p>(Note : No Payment will be made for the the "Weekly Safety Walk" item under PFSS contracts if any one the follow-up is completed after the "Agreed Due Date for the Completion".</p>
+
+  <div class="pagebreak"> </div>
+
+  <center>
+    <strong>
+      <h3>Landslip Prevention and Mitigation Programme 2016, Package K, Landslip Prevention and Mitigation Works in Hong Kong, Kowloon, The New Territories and Outlying Islands</h3>
+    </strong>
+  </center><br>
+
+<div style="display: flex; justify-content: flex-end">
+  <div class="col-xs-8 col-md-8 "></div>
+  <div>
+  <p> Date of Inspection: <u><%= order.booking_datetime.strftime("%F")  %></u></p> 
+</div>
+</div>
+
+<br><br>
+
+
+<% order.items.each do |item | %>
+     <td><%=  item.defect.display_name  %></td>
+     <td><%=  item.location  %></td>
+     <td><%=  item.followup  %></td>
+     <td><%=  item.due_date.strftime("%Y-%m-%d") if item.due_date?   %></td>
+     <td><%=  item.completion_date.strftime("%Y-%m-%d") if item.completion_date?   %></td>
+     <td><%=  item.responsible_person  %></td><br>
+<% end %>
+<br><br>
+
+<% if order.items.count > 0 %>
+
+  <% order.items.each do |item| %>
+    <% if item.photos.count > 0 %>
+      <div class="row break">
+        <h2 class="col-xs-6 col-md-6 center"><%= t('Photo') %></h2>
+          <table id="t01">    
+            <% item.photos.each do |photo| %>
+              <tr>
+                <% if photo.is_printable %>
+                <td><%= image_tag photo.image.url() %><br></td>
+                <% end %>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+<% if order.photos.where(:category => 0).count > 0 %>
+
+  <div class="row break">
+    <h2 class="col-xs-12 col-md-12 center"><%= t('orderPhoto') %></h2>
+      <table id="t01">
+        <% order.photos.where(:category => 0).each_slice(2) do |photos| %>
+          <tr>
+            <% photos.each do |photo| %>
+              <td><%= image_tag photo.item.image.url %><br /></td>
+            <% end %>
+            <% if order.item.photos.where(:category => 0).count == 1 %>
+              <td></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+<% end %>
+

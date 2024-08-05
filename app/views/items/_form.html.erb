@@ -1,0 +1,45 @@
+<div class="container">
+  <%= simple_form_for(@item) do |f| %>
+
+  <br>
+    <div class="form-inputs">
+      <%#= f.association :order %>
+      <%= f.input :order_id, :value => params[:order_id] %>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4 ">
+              <%= f.association :defect, label: t("defect") %>
+            </div>
+            <div class="col-xs-12 col-md-4 ">
+              <%= f.input :location , label: t("location")%>
+            </div>
+            <div class="col-xs-12 col-md-4 ">
+              <%= f.input :followup , label: t("followup")%>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4 ">
+              <%= f.input :due_date, as:  :datetime_picker, label: t("due_date")%>
+            </div>
+            <div class="col-xs-12 col-md-4 ">
+              <%= f.input :completion_date, as:  :datetime_picker, label: t("completion_date") %>
+            </div>
+            <div class="col-xs-12 col-md-4 ">
+              <%= f.input :responsible_person, label: t("responsible_person") %>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-12 ">
+              <%= f.input :remarks, label: t("remarks") %>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>

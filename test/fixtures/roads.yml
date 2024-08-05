@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  district_id: 
+  post: MyString
+  name: MyString
+  chi_name: MyString
+
+two:
+  code: MyString
+  district_id: 
+  post: MyString
+  name: MyString
+  chi_name: MyString

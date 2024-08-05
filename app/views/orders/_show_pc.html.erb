@@ -1,0 +1,181 @@
+<br>
+<div class="container">
+  
+  <div class="row">
+    <div class="col-xs-12 col-md-4 ">
+      <strong><%= t("user_ref") %>:</strong> <%= @order.user_ref %>
+    </div>
+    <div class="col-xs-12 col-md-4 ">
+      <strong><%= t("user_ref_no") %>:</strong>    <%= @order.user_ref_no %>
+    </div>
+    <div class="col-xs-12 col-md-4 ">
+      <strong><%= t("order_no") %>:</strong>    <%= @order.order_no %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-4 ">
+      <strong><%= t("issue") %>:</strong>    <%= @order.issue.display_name %>
+    </div>
+    <div class="col-xs-12 col-md-4 ">
+      <strong><%= t("inspection_date") %>:</strong> <%= @order.booking_datetime.strftime("%F %I:%M %P") %>
+    </div>
+    <div class="col-xs-12 col-md-4 ">
+      <strong><%= t("status") %>:</strong>    
+      <strong  style="color: red;" ><%= t(@order.status) %></strong>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-12 ">
+      <strong><%= t("location") %>:</strong> <%= @order.location %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-12 ">
+     <strong><%= t("remarks") %>:</strong>    <%= @order.notes %>
+    </div>
+  </div><br>
+
+ <strong><%= t("relevant_parties") %></strong>
+ <div class="container-fluid" style="border:1px solid #cecece;" >
+    <% if @order.order_parties.present? %>
+      <table id="stock_items" class="table table-striped">
+        <thead>
+          <tr>
+            <th ><%= t("name") %></th>
+            <th ><%= t("designation") %></th>
+            <th ><%= t("organization") %></th> 
+          </tr>
+        </thead> 
+
+        <tbody>
+
+          <% @order.order_parties.each do |order_party | %>
+ 
+            
+            <tr  data-link="<%= order_party_path(order_party, order_id: order_party.order_id) %>"> 
+               <td><%=  order_party.name  %></td>
+               <td><%=  order_party.designation  %></td>
+               <td><%=  order_party.organization  %></td>
+              </tr>
+            </tr> 
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+    <%= link_to new_order_party_path(order_id: @order)  do %>
+            <i class="glyphicon glyphicon-plus"></i>
+    <% end %>
+  </div>
+<br> 
+ <strong><%= t("issue") %></strong>
+ <div class="container-fluid" style="border:1px solid #cecece;" >
+    <% if @order.items.present? %>
+      <table id="stock_items" class="table table-striped">
+        <thead>
+          <tr>
+            <th ><%= t("defect") %></th>
+            <th ><%= t("location") %></th>
+            <th ><%= t("followup") %></th>
+            <th ><%= t("due_date") %></th>  
+            <th ><%= t("completion_date") %></th>  
+            <th ><%= t("responsible_person") %></th>  
+
+          </tr>
+        </thead> 
+
+        <tbody>
+
+          <% @order.items.order(:due_date).each do |item | %>
+ 
+            
+            <tr  data-link="<%= item_path(item, order_id: item.order_id) %>"> 
+               <td><%=  item.defect.display_name  %></td>
+               <td><%=  item.location  %></td>
+               <td><%=  item.followup  %></td>
+               <td><%=  item.due_date.strftime("%Y-%m-%d") if item.due_date?   %></td>
+               <td><%=  item.completion_date.strftime("%Y-%m-%d") if item.completion_date?   %></td>
+               <td><%=  item.responsible_person  %></td>
+              </tr>
+            </tr> 
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+    <%= link_to new_item_path(order_id: @order)  do %>
+            <i class="glyphicon glyphicon-plus"></i>
+    <% end %>
+  </div>
+
+<br>
+  <div class="row">
+    <div class="col-xs-6 col-md-6 ">
+      <strong><%= t("staff_name") %>:</strong>    <%= @order.staff_name %>
+    </div>
+    <div class="col-xs-6 col-md-6 ">
+      <strong><%= t("customer_name") %>:</strong>    <%= @order.customer_name %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6 col-md-6 ">
+      <strong><%= t("staff_signoff_date") %>:</strong> 
+      <%= @order.staff_signoff_datetime.strftime("%F") if @order.staff_signoff_datetime  %>
+    </div>
+    <div class="col-xs-6 col-md-6 ">
+      <strong><%= t("customer_signoff_date") %>:</strong> 
+      <%= @order.customer_signoff_datetime.strftime("%F") if @order.customer_signoff_datetime %>
+    </div>
+  </div>
+
+
+  <br>
+  <div class="container">
+    <div class="row">
+    <%= link_to t('edit'), edit_order_path(@order), class: "btn btn-tall btn-warning col-xs-4 col-md-4"  %>  
+    <%= link_to t('file'), file_order_path(@order), method: :put, class: "btn btn-tall btn-success col-xs-4 col-md-4"  %>  
+    <%= link_to t('cancel'), cancel_order_path(@order), method: :put, class: "btn btn-tall btn-danger col-xs-4 col-md-4"  %>  
+    </div>
+  </div><br>
+
+    <td>
+      <%= link_to order_downloadpdf_path(@order, format: "pdf") do %>
+        <i class="glyphicon glyphicon-download-alt fa-2x " style="color:blue" ></i>
+      <% end %>
+    </td>
+
+  <br><br>
+
+  <%= render 'photo_upload' %>
+</div>
+  <div id="map" style="width: 100%; height: 100%"></div>
+  <div id="photo_details"><%= render 'photos/order_photo_details' %> </div>
+
+<script>
+  function initialize() {
+    var location = {lat: 22.300, lng: 114.18828}
+
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: location,
+      zoom: 11
+    });
+
+    <% @order.photos.any? do  %>
+      <% @order.photos.each do |photo| %>
+        <% if photo.latitude.present? %>
+          new google.maps.Marker({
+            position: {lat: <%= photo.latitude %>, lng: <%= photo.longitude %> },
+            map: map
+          })
+        <% end %> 
+      <% end %>
+    <% end %>
+
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>

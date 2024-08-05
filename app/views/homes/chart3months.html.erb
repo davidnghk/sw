@@ -1,0 +1,16 @@
+<div class="row">
+
+  <!-- Line Chart - Single Series -->
+  <div class="col-md-4 col-xs-12">
+    <h3 class="text-center"><%= t("clients") %></h3>
+    <%= pie_chart @orders.group(:client).count %>
+  </div>
+  <div class="col-md-4 col-xs-12">
+    <h3 class="text-center"><%= t("clients_by_months") %></h3>
+    <%= column_chart @orders.group(:client).group(:call_month).count %>
+  </div>
+  <div class="col-md-4 col-xs-12">
+    <h3 class="text-center"><%= t("devices") %></h3>
+    <%= column_chart @orders.group(:device).count %>
+  </div>
+</div>

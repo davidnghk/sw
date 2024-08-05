@@ -1,0 +1,25 @@
+<div class="container">
+	<br>
+	<p>
+	  <strong><%= t('code') %>:</strong>
+	  <%= @district.code %>
+	</p>
+
+	<p>
+	  <strong><%= t('name') %>:</strong>
+	  <%= @district.name %>
+	</p>
+
+	<p>
+	  <strong><%= t('chi_name') %>:</strong>
+	  <%= @district.chi_name %>
+	</p>
+
+	  <%= link_to edit_district_path(@district)  do %>
+	    <i class="glyphicon glyphicon-edit"></i>
+	  <% end %>
+
+	  <%= link_to districts_path  do %>
+	    <i class="glyphicon glyphicon-list"></i>
+	  <% end %>
+</div>

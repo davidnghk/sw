@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <!--    
+      <div class="panel-heading">
+        Photos
+      </div>
+      -->
+
+      <div style="padding:0" class="panel-body">
+        <div style="padding:0" class="container"> 
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Phgotos upload goes here -->
+              <%= form_for @order, url: create_general_order_photos_path(@order), method: 'post',
+                  html: {multipart: true} do |f| %>
+
+                 <div class="text-center">
+                   <div class="form-group">
+
+                     <span class="btn btn-info  text-babu">
+                       <i class="fa fa-camera" aria-hidden="true"></i> <%= t("photos") %>
+                       <% if @order.Open? or current_user.Admin? %>
+                        <%= file_field_tag "images[]", type: :file, multiple: true %>
+                       <% end %>
+                     </span>
+                   </div>
+                 </div>
+
+                <% if @order.Open? or current_user.Admin? %>
+                  <div class="text-center">
+                    <%= button_tag type: 'submit', class: "btn btn-primary" do %><%= t("upload") %>
+                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                    <% end %>
+                  </div>
+                <% end %>
+ 
+
+              <% end %>
+            </div>
+          </div>
+
+            <div id="uploaded_photos"><%= render 'photos/order_photos' %> </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

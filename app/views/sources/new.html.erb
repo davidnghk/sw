@@ -1,0 +1,17 @@
+<div class="container">	
+	<h1><%= t("edit") %> <%= t("source") %></h1>
+
+	<%= render 'form' %>
+
+	<br>
+	<td>
+	  <%= link_to @source  do %>
+	    <i class="glyphicon glyphicon-edit"></i>
+	  <% end %>
+	</td>
+	<td>
+	  <%= link_to sources_path  do %>
+	    <i class="glyphicon glyphicon-list"></i>
+	  <% end %>
+	</td>
+</div>

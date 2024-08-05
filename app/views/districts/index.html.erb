@@ -1,0 +1,44 @@
+<div class="container">
+
+  <h1><%= t("districts_list") %></h1>
+
+  <table id="codetable" class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t("code") %></th>
+        <th><%= t("name") %></th>
+        <th><%= t("chi_name") %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @districts.each do |district| %>
+        <tr>
+          <td><%= district.code %></td>
+          <td><%= district.name %></td>
+          <td><%= district.chi_name %></td>
+          
+            <td class="text-right">
+              <%= link_to district do %>
+                <i class="glyphicon glyphicon-zoom-in"></i>
+              <% end %>
+              <%= link_to edit_district_path(district)  do %>
+                <i class="glyphicon glyphicon-edit"></i>
+              <% end %>
+              <%= link_to district, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="glyphicon glyphicon-trash"></i>
+              <% end %>
+            </td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to new_district_path  do %>
+          <i class="glyphicon glyphicon-plus"></i>
+  <% end %>
+</div>

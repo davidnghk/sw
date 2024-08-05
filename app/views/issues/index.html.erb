@@ -1,0 +1,45 @@
+<div class="container">
+
+  <h1><%= t("issue_list") %></h1>
+
+  <table id="codetable" class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t("name") %></th>
+        <th><%= t("chi_name") %></th>
+        <th><%= t("email_to") %></th>
+        <th><%= t("email_cc") %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @issues.each do |issue| %>
+        <tr>
+          <td><%= issue.name %></td>
+          <td><%= issue.chi_name %></td>
+          <td><%= issue.email_to %></td>
+          <td><%= issue.email_cc %></td>
+
+            <td class="text-right">
+              <%= link_to issue do %>
+                <i class="glyphicon glyphicon-zoom-in"></i>
+              <% end %>
+              <%= link_to edit_issue_path(issue)  do %>
+                <i class="glyphicon glyphicon-edit"></i>
+              <% end %>
+              <%= link_to issue, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="glyphicon glyphicon-trash"></i>
+              <% end %>
+            </td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to new_issue_path  do %>
+          <i class="glyphicon glyphicon-plus"></i>
+  <% end %>
+</div>

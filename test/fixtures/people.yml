@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  category: 1
+  post: MyString
+  name: MyString
+  chi_name: MyString
+  type: 
+
+two:
+  code: MyString
+  category: 1
+  post: MyString
+  name: MyString
+  chi_name: MyString
+  type: 

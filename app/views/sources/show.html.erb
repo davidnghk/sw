@@ -1,0 +1,15 @@
+<div class="container">
+	<br>
+	<p>
+	  <strong><%= t('name') %>:</strong>
+	  <%= @source.name %>
+	</p>
+
+	  <%= link_to edit_source_path(@source)  do %>
+	    <i class="glyphicon glyphicon-edit"></i>
+	  <% end %>
+
+	  <%= link_to sources_path  do %>
+	    <i class="glyphicon glyphicon-list"></i>
+	  <% end %>
+</div>

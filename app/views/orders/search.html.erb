@@ -1,0 +1,68 @@
+<br>
+<div class="container">
+  <%= search_form_for @q, url: search_orders_path, html: {method: :post} do |f| %>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="field">
+          <%= f.label :status_eq, t("status") %>
+          <%= f.select :status_eq, Order.statuses.to_a.map { |w| [ t(w[0]), w[1]] },
+                         {:include_blank => true} %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="field">
+          <%= f.label :booking_datetime_gteg, t("booking_date") %>
+          <%= f.search_field :booking_datetime_gteq %>
+
+          <%= f.label :booking_datetime_lteg, "-" %>
+          <%= f.search_field :booking_datetime_lteq %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="actions"> <%= f.submit %> </div>
+
+  <% end %>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t("order_no") %></th>
+        <th><%= t("booking_date") %></th>
+        <th><%= t("issue") %></th> 
+        <th><%= t("location") %></th>
+        <th><%= t("Email") %></th>
+        <th><%= t("status") %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @orders.each do |order| %>
+        <% if order.Open? %>
+            <tr class="info" data-link="<%= order_path(order) %>">
+        <% elsif order.Open? %>
+            <tr class="danger" data-link="<%= order_path(order) %>">
+        <% elsif order.Filed? %>
+            <tr class="warning" data-link="<%= order_path(order) %>">
+        <% elsif order.Cancelled? %>
+            <tr class="success" data-link="<%= order_path(order) %>">
+        <% else %>
+            <tr  data-link="<%= order_path(order) %>">
+        <% end %>
+
+          <td><%= order.order_no %></td>
+          <td><%= order.booking_datetime.strftime("%Y-%m-%d") %></td>
+          <td><%= order.issue.display_name %></td>
+          <td><%= order.location %></td>
+          <td><%= order.user.email %></td>
+          <td><%= t(order.status) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%# = will_paginate @orders, :previous_label => '<', :next_label => '>' %>
+  <br>

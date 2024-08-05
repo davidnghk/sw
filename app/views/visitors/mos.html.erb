@@ -1,0 +1,90 @@
+<!-- Header -->
+<header id="top" class="header">
+    <div class="text-vertical-center">
+      
+      <br><br>
+      <h1><font size="40" color="red"><%= t("brand") %></font></h1>
+      <h3><%#= t("our_services") %></3>
+
+        <% if !user_signed_in? %>
+          <br><br>
+          <%= link_to t("sign_in"), new_user_session_path, class: "btn btn-primary btn-lg " %>
+          <%= link_to t("google"), user_google_oauth2_omniauth_authorize_path, id: "sign_in", class: "btn btn-success btn-lg  " %><br/><br/>
+          <%= link_to t("demo"), "https://www.youtube.com/watch?v=1KiQ23y3Zk4&feature=youtu.be", id: "sign_in", class: "btn btn-warning btn-lg  " %>
+
+        <% else %>
+          <% if mobile_device? %>
+
+              <div class="col-xs-6 col-md-6 ">
+                <%= link_to orders_path(:status => "Open") do %>
+                  <i class="glyphicon glyphicon-inbox btn btn-warning btn-circle-lg"></i> 
+                <% end %>
+              </div>
+              <div class="col-xs-6 col-md-6 ">
+                <%= link_to new_order_path do %>
+                  <i class="glyphicon glyphicon-camera btn btn-success btn-circle-lg"></i> 
+                <% end %>
+              </div>
+
+              <div class="col-xs-6 col-md-6 "><br><font size="5" color="yellow"><%= t('ReportLists') %></font></div>
+              <div class="col-xs-6 col-md-6 "><br><font size="5" color="green"><%= t('NewReport') %></font></div>
+            <% end %>
+      
+      <% end %> 
+       
+    </div>
+</header> 
+
+<% if !mobile_device? %>
+  <!-- Page Content -->
+
+  <!-- Footer -->
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-10 col-lg-offset-1 text-center">
+                  <h4><strong><%= t("company") %></strong>
+                  </h4>
+                <p><%= t("address_1") %><br><%= t("address_2") %></p>
+                  <ul class="list-unstyled">
+                      <li><i class="fa fa-phone fa-fw"></i> (852) 5590-2630</li>
+                      <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:info@letswebapp.com">info@letswebapp.com</a>
+                      </li>
+                  </ul>                
+              </div>
+          </div>
+      </div>
+  </footer>
+<% end %>
+
+<!-- Custom Theme JavaScript -->
+<script>
+// Closes the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Scrolls to the selected menu item on the page
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+</script>

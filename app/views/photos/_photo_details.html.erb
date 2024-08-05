@@ -1,0 +1,18 @@
+<% if @photos.count > 0 %>
+  <br/><br/>
+
+  <div class="row">
+  	<% @photos.each do |photo| %>
+  	  <div class="col-md-12">
+  	    <div class="panel panel-default">
+  	      <div class="panel-heading preview text-center">
+            <% if photo.photoable_type == "Complaint" %>
+              <%= t(photo.category) %>
+            <% end %>
+	  	      <%= image_tag photo.image.url() %>
+  	      </div>
+  	    </div>
+  	  </div>
+  	<% end %>
+  </div>
+<% end %>

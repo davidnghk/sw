@@ -1,0 +1,424 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  staff_signoff_date: "Signoff Date"
+  customer_name: "Engineer Signoff"
+  staff_name: "Site Agent"
+  customer_name: "Engineer his/her representative"
+  user_ref: "Contract No."
+  user_ref_no: "Walk No."
+  FAQ: FAQ"
+  vegetation_id: "Vegetation ID"
+  Open: "Open"
+  Invalid: "Invalid"
+  InProgress: "In Progress"
+  RejectComplaint: ""
+  AcceptComplaint: "確認"
+  Pending:   "Pending" 
+  Valid:   "Valid" 
+  GenReport: "To Generate Report"
+  NotAcknowledged: "Not Acknowledged"
+  AcknowledgeReport: "Acknowledge Report"
+  InterimReport: "Interim Report"
+  FinalReport: "Final Report"
+  MgtReport: "Management Report"
+  MgtRemarks: "Management Remarks"
+  MgtContractorPerformance: "Contractor Performance"
+  MgtDefectReason: "Defect Reason"
+  final_remarks: "Final Remarks"
+  is_work_completed: "Is work Completed?"
+  is_in_fax: "Is Caller Replies in Fax?"
+  sender_withdraw_date: "Sender withdraw Date"
+  final_sender_date: "Final Sender Date"
+  interim_sender_date: "Int. Sender Date"
+  interim_remarks: "Interim Remarks"
+  referral_remarks: "Referral Remarks"
+  notify_sender_date: "Notify Sender Date"
+  referral_date: "Referral Date"
+  acknowledge_date: "Ack Date"
+  refer_to_department: "Refer Dept."
+  complaintPhoto: "投訴相"
+  InProgressComplaint: "In Progress"
+  theMap: "The Map"
+  beforePhoto: "Before Work"
+  afterPhoto: "After Work"
+  RejectComplaint: "Reject"
+  AcceptComplaint: "Confirm"
+  effort: "Effort (Working-Day)"
+  issue: "Issue"
+  issues_list: "Issues List"
+  source: "Referral Officer"
+  sources_list: "Officers List" 
+  OpenComplaint: "Open "
+  InvalidComplaint: "Invalid"
+  ClosedComplaint: "Closed"
+  AllComplaint: "All"
+  cic_no: "CIC #"
+  CIC_case: "CIC CASE"
+  officer: "聯繫經理"
+  brand: "Safety Walk (HK)"
+  company: "LetsApp Limited"
+  our_services: "Cloud-Based Order Management System"
+  device: "Street/Road"
+  technician: "Contractor"
+  call_date: "Complaint date"
+  order_list: "Complaint List"
+  Pothole:   "Pot Hole"
+  TrafficSign: "Traffic Sign"
+  UntidySite: "Untidy Site"
+  Hygiene: "Environmental Hygiene Problem"
+  GeneralCase: "General Case"
+
+  app_title: "MobOrder"
+  app_desc: "MobOrder by Letsapp Limited is an online application that enables you to manage your remote sites service orders with your techicians. The mobile force could get the servicing location via their smartphone, and evaluate the situtation with photos via their smartphone.  After the services are done, photos can be uploaded to system for records.  
+
+You can enforce the desired servicing workflow and manage all your company's servicing orders via PC or smartphone.  With MobOrder, the mobile order servicing management couldn't be more easier."
+  preferred_language: "Preferred Language"
+  hello: "Hello world"
+  duration: "Duration"
+  hours: "Number of Hours"
+  homePage: "Home"
+  order: "Order"
+  new_order: "New Order"
+  Booking: "Booking"
+  List_Booking: "List Booking"
+  New_Booking: "New Booking"
+  about: "About"
+  edit_account: "Edit Account"
+  sign_out: "Sign Out"
+  sign_in: "Sign In"
+  sign_up: "Sign Up"
+  admin: "Admin"
+  users: "Users"
+  start_datetime: "Time"
+  no_of_hours: "Hours"
+  pickup: "Pickup Location"
+  dropff: "Dropoff Location"
+  trip_type: "Trip"
+  helper_class: "Helper Class"
+  total_fee: "Total Fee"
+  server: "Nurse"
+  status: "Status"
+  OneWay: "One Way"
+  RoundTrip: "Round Trip"
+  Helper: "Helper"
+  Nurse: "Nurse"
+  listing_booking: "Listing of Bookings"
+  new: "New"
+  partner_up: "Affiliate"
+  server_grade: "Grade"
+  location: "Location"
+  hospital: "Hospital"
+  contact_person: "Contact"
+  contact_phone_no: "Phone"
+  location_details: "Location Details"
+  fee: "Fee"
+  customer: "Customer"
+  order: "order"
+  booking_date: "Date"
+  booking_time: "Time"
+  pending: "Pending"
+  open: "Open"
+  rejected: "Rejected"
+  cancelled: "Cancelled"
+  confirmed: "Confirmed"
+  completed: "Completed"
+  nurse_rating: "Rating"
+  customer_rating: "Customer's Rating"
+  nurse_phone_no: "Phone No"
+  current_password: "Current Password"
+  leave_blank_password: "Leave these fields blank if you don't want to change your password."
+  enter_password: "You must enter your current password to make changes."
+  acknowledge: "note"
+  
+  our_business: "Our Services"
+  our_business1: "Sales"
+  our_business2: "Installation"
+  our_business3: "Repair and Maintenance"
+  
+  customer: "Client"
+  order_time: "Time"
+  hours: "Hours"
+  hospital: "Hospital"
+  location: "Location"
+  cost: "Pay"
+  contact: "Contact"
+  phone_no: "Phone No"
+  nurse: "Nurse"
+  status: "Status"
+  payment: "Payment"
+  Paid: "Paid"
+  ot: "Outstanding "
+  
+  name: "Name"
+  chi_name: "Chinese Name"
+  client_list: "Client List"
+  new_client: "New Client"
+  chi_address: "Chinese Address"
+  
+  engage: "Engage"
+  cancel: "Cancel"
+  disangage: "Disengage"
+  reject: "Reject"
+  home: "RRHK"
+
+  gen_reports: 
+    NotAcknowledged: "Not Acknowledged"
+    AcknowledgeReport: "Acknowledge Report"
+    InterimReport: "Interim Report"
+    FinalReport: "Final Report"
+    MgtReport: "Management Report"
+
+  complaint_types:
+    Pothole:   "Pot Hole (24 Hours)"
+    TrafficSign: "Traffic Sign (36 Hours)"
+    UntidySite: "Untidy Site (1 Working Day)"
+    Hygiene: "Environment Hygiene Problem (3 working Days)"
+    GeneralCase: "General Case (7 working days)"
+          
+  report_channels:
+    Phone:   "Phone"
+    Fax: "Fax"
+    Email: "Email"
+  
+  mgt_contractor_performance:
+    CapitalWork: "Capital Work"
+    MaintenanceWork: "Maintenance"
+    Not: "No"
+
+  mgt_defect_reason:
+    Notvalid: "Invalid"
+    Duplicate: "Duplicate"
+    Maintenance: "Maintenance"
+    HyDRoadwork: "HyD Road Work"
+    OthRoadWork: "Other Road Work"
+    CarAccident: "Car Accident"
+    IllegalParking: "Illegal Parking"
+    Vandalism: "Vandalism"
+    OutJurisdiction: "Other Jurisdiction"
+    OthRemarks: "Other Remarks"
+
+  refer_to_departments:
+    WSD:  "WSD"
+    DSD: "DSD"
+    HyD: "HyD"
+
+  statuses:
+    Open:   "Open"
+    Invalid: "Invalid"
+    valid: "valid"
+    Completed: "Completed"
+    InProgress: "In Progress"
+    Pending: "Pending"
+  
+  helpers:
+    select:
+      prompt: "Please choose"
+    submit:
+      create: "Create"
+      submit: "Submit"
+      update: "Update"
+
+  activerecord:
+    errors:
+      models:
+        booking:
+          attributes:
+            hours:
+              blank: "No duration inputed"
+        complaint:  
+          attributes:
+            complaint_datetime:
+              in_past: "No future complaint!"
+    attributes:
+      booking:
+        start_datetime: "Start Time"
+        location: "Location"
+        status: "Status"
+      user:
+        name: "Name"
+        email: "email"
+
+  simple_form:
+    labels:
+      defaults:
+        name: "名稱"
+        chi_name: "中文名稱"
+        effort: "時間(工作天)"
+        username: 'User name'
+        password: 'Password'
+        order_datetime: 'Time'
+        hours: 'Hours'
+        hospital: "Hospital"
+        location: "Location"
+        contact_person: "Contact Person"
+        contact_phone_no: "Phone No"
+        nurse: "Nurse"
+        bank: "Bank"
+        bank_account_no: "Bank Account No."
+        bank_account_name: "Bank Account Name"
+    placeholders:
+      defaults:
+        username: 'Your username'
+        password: '****'
+        order_datetime: 'Time'
+        hours: 'Hours'
+        hospital: "Hospital"
+        location: "Location"
+        contact_person: "Contact Person"
+        contact_phone_no: "Phone No"
+        nurse: "Nurse"
+                
+  activerecord:
+    enums:
+      order:
+        status:
+          Open:   "Open"
+          FollowUp: "FollowUp"
+          Completed: "Completed"
+          Cancelled: "Cancelled"
+          Escalated: "Escalated"
+          Acknowleged: "Acknowleged"   
+      complaint:
+        status:
+          Open:   "Open"
+          Valid: "Valid"
+          Invalid: "Invalid"
+          Pending: "Pending"
+          Completed: "Completed"
+          Cancelled: "Cancelled"
+          Rejected: "Rejected"
+          Confirmed: "Confirmed"
+        payment: 
+          Paid: "Paid"
+          Refunded: "Refunded"
+          NotPaid: "Not Paid"
+          PaidOut: "Paid Out"
+      user:
+        role:
+          customer: "Customer"
+          partner: "Partner"
+          admin: "Admin"
+          user: "User"
+          vip: "VIP"
+        qualification:
+          registered_nurse: "Registered Nurse"
+          enrolled_nurse: "Enrolled Nurse"
+        status:
+          Pending: "Pending"
+          Approved: "Approved"
+          Disapproved: "Disapproved"
+  
+  errors:
+    messages:
+      in_future: "The date should be in the future"
+  
+  datepicker:
+    dformat: '%Y/%m/%d'             # display format of the date (this is the default, can be ommited)
+    pformat: 'YYYY/MM/DD'           # picking format of the date (this is the default, can be ommited)
+  timepicker:
+    dformat: '%R'                   # display format of the time (this is the default, can be ommited)
+    pformat: 'HH:00'                # picking format of the time (this is the default, can be ommited)
+  dayViewHeaderFormat: 'MMMM YYYY'
+  
+  hospitals:
+    嘉諾撒醫院: "Canossa Hospital"
+    播道醫院: "Evangel Hospital"
+    香港港安醫院: "HK Adventist Hospital"
+    浸信會醫院: "HK Baptist Hospital"
+    養和醫院: "HK Sanatorium & Hospital"
+    明德國際醫院: "Matilda Intl Hospital"
+    寶血醫院: "Precious Blood Hospital"
+    聖保祿醫院: "St. Paul's Hospital"
+    聖德肋撒醫院: "St. Teresa's Hospital"
+    荃灣港安醫院: "Tsuen Wan Adventist Hospital"
+    仁安醫院: "Union Hospital"
+    
+  our_services1: "You Derserve It"
+  our_services2: "To have your peace of mind, we take good care of your family"
+  services_scope: "Services"
+  services_2A: "Hospital Nursing"
+  services_2B: "Private Hospital Nursing Services"
+  services_3A: "Private Nursing"
+  services_3B: "Home Visit Nursing Services"
+  services_1A: "Medical Escort"
+  services_1B: "Private Medical Escort Services"
+  promotion: "Promotion"
+  details: "Details"
+  address_1: "Level 4, Core E, Cyberport 3"
+  address_2: "100 Cyberport Road, Hong Kong"
+  work_scope: "Services Scope"
+  
+  FAQ: "FAQ"
+  FAQ_customer: "Customer Questions"
+  FAQ_partner: "Partner Questions"
+  FAQ_text: "Frequently asked questions"
+  
+  FAQ_1Q: "What is Road Reporter Hong Kong (RRHK) ?"
+  FAQ_1A: "It is a mobile/laptop app allows people report road issues, such as road damage and fallen trees, 
+            responsibile department in Hong Kong."  
+  FAQ_2Q: "Is it a Hong Kong Government's app?"
+  FAQ_2A: "No, it is an app developed by Letsapp Limited. "
+  FAQ_3Q: "Do we have to pay to use it? "
+  FAQ_3A: "No, it is free to use. "
+  FAQ_4Q: "Why use it instead of reporting to Hong Kong government?"
+  FAQ_4A: "The RRHK makes your life a lot easier, you could report road issues with a few clicks."
+  FAQ_5Q: "What so special about RRHK?"
+  FAQ_5A: "It is easy and supports photo uploads with your smartphone.  The app will shows GPS information in map from uploaded photos. "  
+  FAQ_6Q: "Could I file a road report without photos? "
+  FAQ_6A: "Yes, but a picture worth a thousand words.  Further, photos' GPS data can pin-point the locations."
+  FAQ_7Q: "How could I sign up?"
+  FAQ_7A: "You could sign up on the web, or with google account. "
+  FAQ_8Q: "What is RRHK's privacy policy？"
+  FAQ_8A: "We do not collect personal data, and will not give our data to 3rd parties。"
+  
+  partner_FAQ_1Q: "Who can be your partners?"
+  partner_FAQ_1A: "Only qualified registered nurse in Hong Kong can join us."  
+  partner_FAQ_2Q: "Any fee to join LetsNurse?"
+  partner_FAQ_2A: "It is alsolutely free to join."
+  partner_FAQ_3Q: "What need to be done before providing services?"
+  partner_FAQ_3A: "You need to sign up with your professional information, and you can take order after your application is approved."
+  partner_FAQ_4Q: "Why do you need my photo and my HKID copy?"
+  partner_FAQ_4A: "We need to verify your identity in the approval process. Further, your photo will be directed to clients with your bookings.  A nice portrait photo is desirable."
+  partner_FAQ_5Q: "How could I know if there is open booking?"
+  partner_FAQ_5A: "Once your application is approved, you will be informed available bookings by emails "  
+  partner_FAQ_6Q: "How could I take orders?"
+  partner_FAQ_6A: "Go to the booking listing via menu Booking, you can see all the available bookings."  
+  partner_FAQ_7Q: "What should I do after picking a booking?"
+  partner_FAQ_7A: "You should contact your clients via phone and/or whatsapp once you confirmed the order."
+  partner_FAQ_8Q: "Am I free to pick the bookings?"
+  partner_FAQ_8A: "You are free to pick your orders you want based on bookings' locations, time and durations"
+  partner_FAQ_9Q: "How do I get paid"
+  partner_FAQ_9A: "You will be paid weekly with accounting deadline at Sunday night, and payment will be wired to to bank account by next Wednesday." 
+  partner_FAQ_10Q: "What is the rating system?"
+  partner_FAQ_10A: "Your clients will rated your services from 1 to 5 stars. You may be forbidden from picking bookings if your score is too low. To avoid that, providing first class services is always the best strategy. "
+  
+  about_us: "About Us"
+  about_letsnurse: "About LetsNurse"
+  about_letsnurse_1: "LetsNurse is placement agent that sources qualified nursing services for our clients. To ensure the quality of our services, we only source Hong Kong experienced registered nurses."
+  about_letsnurse_2: "Our English and/or Cantonese speaking registered nurses are happy to provide first class nursing services in the place that you want, whether it is in hospital or in your home.  Should you need a long-term private nursing services arrangment, feel free to contact us."
+  about_letsnurse_3: "Our mission is to provide quality, private nursing services wherever and whenever you need it."
+  
+  job: "Our Practices"
+  job1: "Home Care"
+  job2: "Hospital Care"
+  job3: "Medical Escort"

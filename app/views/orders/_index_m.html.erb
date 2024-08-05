@@ -1,0 +1,32 @@
+    <%= link_to t('Open'), orders_path(:status => "Open"), class: 
+          "btn btn-tab btn-default btn-tab btn-lg col-xs-3 col-md-3 "  %>  
+    <%= link_to t('Filed'), orders_path(:status => "Filed"), class: 
+          "btn btn-tab btn-info btn-tab btn-lg col-xs-3 col-md-3  "  %>  
+    <%= link_to t('Cancelled'), orders_path(:status => "Cancelled"), class: 
+          "btn btn-tab btn-success btn-tab btn-lg col-xs-3 col-md-3 " %>
+    <%= link_to t('All'), orders_path(:status => "All"), class: 
+          "btn btn-tab btn-warning btn-tab btn-lg col-xs-3 col-md-3 " %>
+
+  <table class="table table-striped">
+    <tbody>
+      <% if (@orders != nil) then %>
+        <% @orders.each do |order| %>
+          <tr class="primary" data-link="<%= order_path(order) %>">
+            <td>
+              <small>
+                <%= order.order_no %> <%= t(order.status) %><br>
+                <%= order.booking_datetime.strftime("%y-%m-%d") %> <br>
+              </small>
+            </td>
+            <td>
+              <small>
+                <%= order.issue.display_name %> <br>
+                <%#= order.district.display_name %> <%= order.location %><br>
+              </small>
+            </td>
+          </tr>
+        <% end %> 
+      <% end %>
+    </tbody>
+  </table>
+

@@ -1,0 +1,17 @@
+{
+  // Run the app in a production environment. The default value is "development".
+  "environment": "development",
+  // Run Passenger on the given port. In this example, we use port 80,
+  // the standard HTTP port.
+  "port": 4086,
+  // Tell Passenger to daemonize into the background.
+  "daemonize": true,
+  // Tell Passenger to run the app as the given user. Only has effect
+  // if Passenger was started with root privileges.
+  "user": "david_ng_hk"
+  //"ssl": true,
+  //"ssl_certificate": "/etc/apache2/ssl/5c18a190d58d1d83.crt",
+  //"ssl_certificate_key": "/etc/apache2/ssl/letsapp.biz/cos.letsapp.biz.key"
+  //"nginx_config_template": "../ssl/nginx.conf.erb"
+}
+
